@@ -1,55 +1,134 @@
 # Credit-Card-Fraud-Detection-Using-Machine-Learning
 
- ## ABSTRACT
-Credit card fraud is a significant problem, with billions of dollars lost each year. Machine learning can be used to detect credit card fraud by identifying patterns that are indicative of fraudulent transactions. Credit card fraud refers to the physical loss of a credit card or the loss of sensitive credit card information. Many machinelearning algorithms can be used for detection. This project proposes to develop a machine-learning model to detect credit card fraud. The model will be trained on a dataset of historical credit card transactions and evaluated on a holdout dataset of unseen transactions.
-<br>
-<br>
-<b>Keywords:</b> Credit Card Fraud Detection, Fraud Detection, Fraudulent Transactions, Logistic Regression.
+## 📌 Project Overview
 
-<br>
-<br>
+This project focuses on detecting fraudulent credit card transactions using Machine Learning.
 
-## Overview
+The main objective is to identify fraudulent transactions and evaluate different classification models using performance metrics such as Precision, Recall, and F1-Score.
 
-With the increase of people using credit cards in their daily lives, credit card companies should take special care of the security and safety of the customers. According to (Credit card statistics 2021), the number of people using credit cards worldwide was 2.8 billion in 2019; also, 70those users own a single card. Reports of Credit card fraud in the U.S. rose by 44.7in 2020. There are two kinds of credit card fraud, and the first is having a credit card account opened under your name by an identity thief. Reports of this fraudulent behaviour increased 48to 2020. The second type is when an identity thief uses an existing account you created, usually by stealing the
-information on the credit card. Reports on this type of Fraud increased 9to 2020(Daly, 2021). Those statistics caught We’s attention as the numbers have increased drastically and rapidly throughout the years, which motivated We to resolve the issue analytically by using different machine learning methods to detect fraudulent credit card transactions within numerous transactions.
+The project also addresses the class imbalance problem using SMOTE (Synthetic Minority Over-sampling Technique).
 
-<br>
-<br>
+---
 
-## Project goals
+## 📊 Dataset
 
-The main aim of this project is the detection of fraudulent credit card transactions, as it is essential to figure out the fraudulent transactions so that customers do not get charged for the purchase of products that they did not buy. Fraudulent Credit card transactions will be detected with multiple ML techniques. Then, a comparison will be made between the outcomes and results of each method to find the best and most suited model for detecting fraudulent credit card transactions; graphs and numbers will also be provided. In addition, it explores previous literature and different
-techniques used to distinguish Fraud within a dataset.
+The dataset contains credit card transaction information.
 
+### Features:
+- Time: Time elapsed between transactions
+- V1 to V28: PCA-transformed features
+- Amount: Transaction amount
+- Class: Target variable
+  - 0: Genuine transaction
+  - 1: Fraudulent transaction
 
-<br>
-<br>
+The dataset is highly imbalanced, with fraudulent transactions representing a very small proportion of total transactions.
 
-## Data Source
+---
 
-The dataset was retrieved from an open-source website, Kaggle.com. It contains data on transactions made in 2013 by European credit card users in two days only. Thedataset consists of 31 attributes and 284,808 rows. Twenty-eight attributes are numeric variables that, due to the confidentiality and privacy of the customers, have been transformed using PCA transformation; the three remaining attributes are ”Time”, which contains the elapsed seconds between the first and other transactions
-of each Attribute, ”Amount” is the amount of each transaction, and the final attribute “Class” which contains binary variableswhere “1” is a case of fraudulent transaction, and “0” is not as case of fraudulent transaction.
-<br>
-<br>
-<b>Dataset: </b>
-<a href="https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud">kaggle Dataset</a>
+## 🛠️ Technologies Used
 
-<br>
-<br>
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Scikit-learn
+- Imbalanced-learn (SMOTE)
+- Jupyter Notebook
 
-## Algorithm 
-1. Logistic Regression (L.R.)
+---
 
-<br>
-<br>
+## 🔍 Project Workflow
 
-## Future Work 
-There are many ways to improve the model, such as using it on different datasets with various sizes and data types or by changing the data splitting ratio and viewing it from a different algorithm perspective. An example can be merging telecom datato calculate the location of people to have better knowledge of the location of the card owner while his/her credit card is being used; this will ease the detection because if the card owner is in Dubai and a transaction of his card was made in Abu Dhabi, it
-will easily be detected as Fraud.
+1. Data Loading
+2. Exploratory Data Analysis (EDA)
+3. Missing Value Analysis
+4. Feature Scaling
+5. Class Imbalance Analysis
+6. Train-Test Split
+7. Model Training
+8. Model Evaluation
+9. SMOTE-Based Resampling
+10. Random Forest Model Training
 
-<br>
-<br>
+---
 
-## Conclusion
-In conclusion, the main objective of this project was to find the most suited model for creditcard fraud detection in terms of the machine learning techniques chosen for the project. It was met by building the four models and finding the accuracies of them all; the best in terms of accuracy is Logistic Regression with accuracy of 94% on credit card fraud and increased the customer’s satisfaction as it will provide themwith a better experience and feeling secure.
+## 🤖 Machine Learning Models
+
+The following models were implemented:
+
+- Decision Tree Classifier
+- Random Forest Classifier
+- Logistic Regression
+
+Random Forest was selected for further experimentation with resampled data.
+
+---
+
+## ⚖️ Handling Class Imbalance
+
+The dataset contains significantly fewer fraudulent transactions than genuine transactions.
+
+To address this issue, SMOTE (Synthetic Minority Over-sampling Technique) was used to generate synthetic samples for the minority class.
+
+This helps the model learn patterns associated with fraudulent transactions.
+
+---
+
+## 📈 Evaluation Metrics
+
+The models were evaluated using:
+
+- Accuracy
+- Precision
+- Recall
+- F1-Score
+- Confusion Matrix
+
+In fraud detection, Recall and Precision are particularly important for understanding the model's performance.
+
+---
+
+## 🚀 How to Run the Project
+
+### 1. Clone the Repository
+
+git clone YOUR_GITHUB_REPOSITORY_LINK
+
+### 2. Install Dependencies
+
+pip install pandas numpy matplotlib seaborn scikit-learn imbalanced-learn
+
+### 3. Open the Notebook
+
+jupyter notebook
+
+### 4. Run the Project
+
+Open the Credit Card Fraud Detection notebook and execute the cells.
+
+---
+
+## 📁 Project Structure
+
+Credit-Card-Fraud-Detection/
+│
+├── Credit card.ipynb
+├── creditcard.csv
+├── model.pkl
+└── README.md
+
+---
+
+## 🔮 Future Improvements
+
+- Apply SMOTE only to the training dataset
+- Perform hyperparameter tuning
+- Implement cross-validation
+- Compare ROC-AUC and PR-AUC
+- Optimize the classification threshold
+- Deploy the model using Streamlit
+
+---
+
