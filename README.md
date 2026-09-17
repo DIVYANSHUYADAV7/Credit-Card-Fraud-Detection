@@ -90,26 +90,6 @@ In fraud detection, Recall and Precision are particularly important for understa
 
 ---
 
-## 🚀 How to Run the Project
-
-### 1. Clone the Repository
-
-git clone YOUR_GITHUB_REPOSITORY_LINK
-
-### 2. Install Dependencies
-
-pip install pandas numpy matplotlib seaborn scikit-learn imbalanced-learn
-
-### 3. Open the Notebook
-
-jupyter notebook
-
-### 4. Run the Project
-
-Open the Credit Card Fraud Detection notebook and execute the cells.
-
----
-
 ## 📁 Project Structure
 
 Credit-Card-Fraud-Detection/
